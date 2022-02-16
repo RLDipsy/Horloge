@@ -1,0 +1,309 @@
+@font-face {
+ font-family: "Montserrat-Light";
+ src: url("/fonts/Montserrat-Light.ttf") format("truetype");
+ font-weight: 200;
+}
+@font-face {
+ font-family: "Montserrat-ExtraLight";
+ src: url("/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+ font-weight: 200;
+}
+@font-face {
+ font-family: "Montserrat-Thin";
+ src: url("/fonts/Montserrat-Thin.ttf") format("truetype");
+ font-weight: 200;
+}
+
+/* RESET */
+
+body, html{
+	margin: 0px;
+	padding: 0px;
+}
+
+div, button, p{
+	box-sizing: border-box;
+}
+
+.app{
+	width: 400px;
+	height: 100%;
+	background-color: #050D2C;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+
+	#titre{
+		margin: 0;
+		color: white;
+		font-family: "Montserrat-Thin";
+		text-align: center;
+		background-color: #040B20;
+		padding: 10px 0 10px 0;
+		width: 400px;
+		position: absolute;
+	}
+
+	#canvas1{
+		background-color: #050D2C;
+		margin-top: 30px;
+
+	}
+
+	#inner{
+		display: flex;
+		height: 300px;
+		margin: 50px 0 50px 0;
+	}
+
+		#inner button{
+			border: 0;
+			padding: 0;
+			background-position: 50%;
+			background-repeat: no-repeat;
+			
+		}
+
+		#bouton_reset{
+			box-sizing: inherit;
+			display: none;
+			position: relative;
+			width: 50px;
+			height: 50px;
+			margin: 0;
+			top: 150px;
+			left: 0px;
+			margin-left: 50px;
+			border-radius: 10em;
+			background-color: #050D2C;
+			background-image: url('../Icons/reset.png');
+			background-size: 40px 40px;
+			padding: 0;
+		}
+
+		#bouton_reset:focus{
+			outline: none;
+		}
+
+		#bouton_start{
+			display: none;
+			position: relative;
+			width: 100px;
+			height: 100px;
+			margin-left: 50px;
+			top: 120px;
+			left: 0px;
+			border-radius: 50em;
+			background-color: #050D2C;
+			background-image: url('../Icons/play3.png');
+			background-size: 100px 100px;
+		}
+
+		#bouton_start:focus{
+			outline: none;
+		}
+
+		#box-fuseaux{
+			display: flex;
+			flex-direction: column;
+		}
+
+			#fuseau{
+				padding-bottom: 1px;
+				width: 400px;
+				background-color: #062245;
+				opacity: 1;
+			}
+
+				.Newyork{
+					margin-top: 15px;
+				}
+
+				#fuseau h2{
+					color: white;
+					font-size: 1em;
+					opacity: 0.95;
+					font-family: "Montserrat-Light";
+					font-weight: 100;
+					margin: 0;
+				}
+
+					.inner{
+						background-color: #050D2C;
+						padding: 10px 0 20px 20px;
+						display: flex;
+						
+					}
+
+						.inner #ville{
+							width: 85%;
+						}
+
+						.inner #heure{
+							padding-top: 10px;
+						}
+
+						.inner p{
+							margin: 0;
+							color: white;
+							opacity: 0.6;
+							font-size: 0.7em;
+							font-family: "Montserrat-Light";
+						}
+
+						.inner mark{
+						    background-color: transparent;
+							margin: 0;
+							color: white;
+							font-size: 1em;
+							font-family: "Montserrat-Light";
+						}
+
+		#minuteur{
+			display: none;
+			margin: auto;
+			margin-top: -30px;
+		}
+
+			#bouton_affichage{
+				display: none;
+				position: absolute;
+				top: 80px;
+				left: 0;
+				right: 0;
+				/*bottom: 0;*/
+				margin: auto;
+				width: 380px;
+				height: 100px;
+			}
+
+				#bouton_affichage button{
+					width: 34%;
+					background-color: transparent;
+					outline: none;
+				}
+
+				#bouton_affichage:nth-child(1){
+
+				}
+				#bouton_affichage:nth-child(2){
+					
+				}
+				#bouton_affichage:nth-child(3){
+					
+				}
+
+		#minuteur div:nth-child(3){
+			display: flex;
+		}
+
+		#clavier{
+			display: flex;
+			flex-wrap: wrap;
+			/*background-color: blue;*/
+			margin : auto;
+			width: 300px;
+			height: 300px;
+		}
+			#clavier button:focus{
+				outline: none;
+			}
+
+			.chiffre{
+				background-color: transparent; 
+				width: 33%;
+				color: white;
+				font-size: 1.3em;
+				line-height: 50px;
+				font-family: "Montserrat-Light";
+			}
+
+			#btn-effacer{
+				background-color: transparent; 
+				width: 33%;
+				order: 3;
+				background-image: url(../Icons/suppr.png);
+				background-size: 25px 25px;
+			}
+			#btn-effacer{
+				outline: none;
+			}
+			#btn-supprimer{
+				background-color: transparent; 
+				background-image: url(../Icons/reset.png);
+				background-size: 25px 25px;
+				width: 50px;
+				height: 50px;
+				order: 1;
+				margin-left: 23px;
+				margin-right: 50px;
+			}
+			#btn-supprimer:focus{
+				outline: none;
+			}
+			#btn-0{
+				order: 2;
+				margin-left: 33%;
+			}
+
+			#btn-play{
+				width: 50px;
+				height: 50px;
+				border-radius: 50em;
+				background-color: #050D2C;
+				background-image: url('../Icons/play3.png');
+				background-size: 50px 50px;
+				order: 2;
+			}
+
+			#btn-play:focus{
+				outline: none;
+			}
+			
+
+
+	#menu{
+		display: flex;
+		background-color: #040B20;
+		flex-grow: 1;
+	}
+		#menu button{
+			border: 0;
+			padding: 18px;
+			background-color: #040B20;
+			background-position: 50%;
+			background-repeat: no-repeat;
+			width: 34%;
+		}
+
+		#menu button:nth-child(1){
+			background-image: url('../Icons/horloge.png');
+			background-size: 25px, 25px;
+		}
+		#menu button:nth-child(2){
+			background-image: url('../Icons/chrono.png');
+			background-size: 20px, 20px;
+		}
+		#menu button:nth-child(3){
+			background-image: url('../Icons/minuteur.png');
+			background-size: 22px, 22px;
+		}
+
+		#menu button:nth-child(1):focus{
+			outline: none;
+			background-image: url('../Icons/horloge_actif.png');
+		}
+		#menu button:nth-child(2):focus{
+			outline: none;
+			background-image: url('../Icons/chrono_actif.png');
+		}
+		#menu button:nth-child(3):focus{
+			outline: none;
+			background-image: url('../Icons/minuteur_actif.png');
+		}
+
+
+
+	

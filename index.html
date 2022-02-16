@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horloge</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<script type="module" src="JS/main.js"></script>
+	<script type="module" src="JS/chrono/chrono.js"></script>
+	<script type="module" src="JS/horloge/horloge.js"></script>
+</head>
+<body>
+	<div class="app">
+		<p id="titre"></p>
+		<canvas id="canvas1" width="400" height="200"></canvas>
+		<div id="inner">
+			<button id="bouton_reset"></button>
+			<button id="bouton_start"></button>
+			<div id="box-fuseaux">
+				<div id="fuseau" class="Newyork">
+					<div class="inner">
+						<div id="ville">
+							<h2>New York</h2>
+							<p></p>
+						</div>
+						<div id="heure">
+							<mark class="Hnewyork"></mark>
+						</div>
+					</div>
+				</div>
+				<div id="fuseau" class="Londres">
+					<div class="inner">
+						<div id="ville">
+							<h2>Londres</h2>
+							<p></p>
+						</div>
+						<div id="heure">
+							<mark class="Hlondres"></mark>
+						</div>
+					</div>
+				</div>
+				<div id="fuseau" class="Pekin">
+					<div class="inner">
+						<div id="ville">
+							<h2>Pékin</h2>
+							<p></p>
+						</div>
+						<div id="heure">
+							<mark class="Hpekin"></mark>
+						</div>
+					</div>
+				</div>
+				<div id="fuseau" class="Chicago">
+					<div class="inner">
+						<div id="ville">
+							<h2>Chicago</h2>
+							<p></p>
+						</div>
+						<div id="heure">
+							<mark class="Hchicago"></mark>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="minuteur">
+				<div id="bouton_affichage">
+					<button id="btn-heure"></button>
+					<button id="btn-minute"></button>
+					<button id="btn-seconde"></button>
+				</div>
+				<div id="clavier">
+					<button id="btn-1" class="chiffre">1</button>
+					<button id="btn-2" class="chiffre">2</button>
+					<button id="btn-3" class="chiffre">3</button>
+					<button id="btn-4" class="chiffre">4</button>
+					<button id="btn-5" class="chiffre">5</button>
+					<button id="btn-6" class="chiffre">6</button>
+					<button id="btn-7" class="chiffre">7</button>
+					<button id="btn-8" class="chiffre">8</button>
+					<button id="btn-9" class="chiffre">9</button>
+					<button id="btn-0" class="chiffre">0</button>
+					<button id="btn-effacer"></button>
+				</div>
+				<div>
+					<button id="btn-supprimer"><-</button>
+					<button id="btn-play"></button>
+				</div>
+			</div>
+			
+		</div>
+
+		
+		<div id="menu">
+			<button id="bouton_horloge"></button>
+			<button id="bouton_chrono"></button>
+			<button id="bouton_minuteur"></button>
+		</div>
+	</div>
+</body>
+</html>
